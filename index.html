@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Holi</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.p1').hover(function() {
+                let arriba = Math.random() * (400 - 1) + 1;
+                let abajo = Math.random() * (609 - 1) + 1;
+
+                $(this).css('top', arriba + 'px');
+                $(this).css('left', abajo + 'px');
+            });
+
+            $('.p2').click(function() {
+                $('.contenedor').fadeOut('fast', function() {
+                    $('body').append('<div class="final-message"><h2>OMG, no esperaba llegar tan lejos</h2><p><a href="https://www.youtube.com/watch?v=W0PpynS8Hhk" target="_blank">Te extraño Cielo Vazquez</a></p></div>');
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="titulo">
+            <h1>¿Me das otra oportunidad?</h1>
+        </div>
+        <div class="opciones">
+            <p class="p1">No</p>
+            <p onclick="dijoSi()" class="p2">Sí</p>
+        </div>
+        <div id="si">
+            <h2>OMG, no esperaba llegar tan lejos, te extraño...</h2>
+            <p><a href="https://www.youtube.com/watch?v=2Vv-BfVoq4g" target="_blank" style="color: #fff; text-decoration: underline;">Escucha "Lover" de Taylor Swift</a></p>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
